@@ -1,11 +1,11 @@
-import React from 'react'
-import { Tilt } from 'react-tilt'
-import { motion } from 'framer-motion'
-import { styles } from '../styles'
-import { services } from '../constants'
-import {fadeIn,textVariant} from '../utils/motion';
+import React from "react";
+import { Tilt } from "react-tilt";
+import { motion } from "framer-motion";
+import { styles } from "../styles";
+import { services } from "../constants";
+import { fadeIn, textVariant } from "../utils/motion";
 
-const ServiceCard = ({index,title,icon}) => {
+const ServiceCard = ({ index, title, icon }) => {
   return (
     <Tilt
       className="xs:w-[250xp] w-full"
@@ -24,7 +24,7 @@ const ServiceCard = ({index,title,icon}) => {
       </motion.div>
     </Tilt>
   );
-}
+};
 
 const About = () => {
   return (
@@ -35,11 +35,10 @@ const About = () => {
       viewport={{ once: true, amount: 0.25 }}
       className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
     >
-      
       <motion.div variants={textVariant()}>
-      <span className="hash-span" id="about">
-        &nbsp;
-      </span>
+        <span className="hash-span" id="about">
+          &nbsp;
+        </span>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview</h2>
       </motion.div>
@@ -47,7 +46,14 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda sed distinctio impedit voluptate earum est reprehenderit magnam fugiat corporis praesentium explicabo culpa, voluptatem, mollitia, dolorem illum fugit. Quisquam voluptate sit numquam dolorem culpa, exercitationem incidunt iusto sint commodi reprehenderit provident vel, optio dolorum iste nisi, perferendis eveniet blanditiis quae autem?
+        {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda sed distinctio impedit voluptate earum est reprehenderit magnam fugiat corporis praesentium explicabo culpa, voluptatem, mollitia, dolorem illum fugit. Quisquam voluptate sit numquam dolorem culpa, exercitationem incidunt iusto sint commodi reprehenderit provident vel, optio dolorum iste nisi, perferendis eveniet blanditiis quae autem? */}
+        I'm a sophomore at Indian institute of information technology and
+        Management, Gwalior currently pursuing Integrated B.tech in Information
+        technology and Masters of Business Administration. 
+        <br />I'm enthusiastic
+        about crafting dynamic and efficient web applications. I have a strong
+        foundation in technologies like React.js, Node.js, Express, MongoDB, and
+        Next.js.
       </motion.p>
       <div className="mt-20 grid grid-cols-2 gap-10 ">
         {services.map((service, index) => (
@@ -56,10 +62,7 @@ const About = () => {
       </div>
     </motion.div>
   );
-}
-
-
-
+};
 
 const staggerContainer = (staggerChildren, delayChildren) => {
   return {
@@ -73,6 +76,4 @@ const staggerContainer = (staggerChildren, delayChildren) => {
   };
 };
 
-
-export default About
-
+export default About;
