@@ -22,11 +22,11 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
-import ai_summerizer from "./ai_summerizer.png"
+import ai_summerizer from "./ai_summerizer.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
-
+import ytclone from "./ytclone.png";
 export {
   ai_summerizer,
   logo,
@@ -54,4 +54,5 @@ export {
   carrent,
   jobit,
   tripguide,
+  ytclone,
 };

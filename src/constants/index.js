@@ -15,7 +15,7 @@ import {
     shopify,
     carrent,
     jobit,
-    tripguide,
+    ytclone,
     ai_summerizer,
 } from "../assets";
 
@@ -167,48 +167,28 @@ const projects = [
     image: ai_summerizer,
     source_code_link: "https://github.com/parasmahla1/ai_summerizer",
   },
-//   {
-//     name: "ABC",
-//     description:
-//       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ex laudantium debitis, saepe vel itaque eius delectus est in doloremque id modi totam aut adipisci. Labore nemo fuga facere sequi voluptatem corrupti dolore quia, deserunt dignissimos neque soluta ad quasi aspernatur debitis reiciendis quibusdam numquam, tempore nam? Nostrum, officia amet",
-//     tags: [
-//       {
-//         name: "react",
-//         color: "blue-text-gradient",
-//       },
-//       {
-//         name: "restapi",
-//         color: "green-text-gradient",
-//       },
-//       {
-//         name: "scss",
-//         color: "pink-text-gradient",
-//       },
-//     ],
-//     image: jobit,
-//     source_code_link: "https://github.com/",
-//   },
-//   {
-//     name: "XYZ",
-//     description:
-//       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ex laudantium debitis, saepe vel itaque eius delectus est in doloremque id modi totam aut adipisci. Labore nemo fuga facere sequi voluptatem corrupti dolore quia, deserunt dignissimos neque soluta ad quasi aspernatur debitis reiciendis quibusdam numquam, tempore nam? Nostrum, officia amet",
-//     tags: [
-//       {
-//         name: "nextjs",
-//         color: "blue-text-gradient",
-//       },
-//       {
-//         name: "materialUI",
-//         color: "green-text-gradient",
-//       },
-//       {
-//         name: "css",
-//         color: "pink-text-gradient",
-//       },
-//     ],
-//     image: tripguide,
-//     source_code_link: "https://github.com/",
-//   },
+  {
+    name: "Youtube Clone",
+    description:
+      "The objective of this project is to develop a simplified video-sharing platform, reminiscent of YouTube, focusing solely on video-viewing functionalities. Users can browse, search for, and watch videos without the ability to upload content or interact through comments, likes, or subscriptions.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Rapid api",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Material UI",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: ytclone,
+    source_code_link: "https://github.com/parasmahla1/yt-clone",
+  },
+  
 ];
 
 export { services, technologies, experiences, projects };
