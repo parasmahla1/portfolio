@@ -8,38 +8,22 @@ import { fadeIn } from "../utils/variants";
 const EmailForm = () => {
   const name = "Let's get in touch!".split("");
 
-  const formRef = useRef();
+  const form = useRef();
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
   const [error, setError] = useState(false);
 
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const handleChange = (e) => {
-    const {target} = e;
-    const {name,value} = target;
 
-    setForm({ ...form, [name]: value });
-  };
   const sendEmail = (e) => {
     e.preventDefault();
     setSending(true);
 
     emailjs
       .sendForm(
-        process.env.VITE_SERVICE_ID,
-        process.env.VITE_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: "Paras",
-          from_email: form.email,
-          to_email: "parasmahla80@gmail.com",
-          message: form.message,
-        },
-        process.env.VITE_PUBLIC_KEY
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        form.current,
+        import.meta.env.VITE_PUBLIC_KEY
       )
       .then(
         (result) => {
@@ -80,7 +64,7 @@ const EmailForm = () => {
             Leave your details and a short message below
           </p>
         </div>
-        <form ref={formRef} onSubmit={sendEmail}>
+        <form ref={form} onSubmit={sendEmail}>
           {/*container*/}
           <div className="w-full mx-auto bg-gray-100 rounded-lg shadow-lg p-7">
             {/*name and email*/}
@@ -89,9 +73,7 @@ const EmailForm = () => {
                 <label className="font-medium">Full name</label>
                 <input
                   type="text"
-                  name="name"
-                  onChange={handleChange}
-                  value={form.name}
+                  name="user_name"
                   className="w-full h-12 p-5 mb-2 font-light rounded-lg md:h-14 placeholder:text-sm placeholder:opacity-80 placeholder:italic focus:outline-v"
                   placeholder="Enter your name"
                   required
@@ -101,9 +83,7 @@ const EmailForm = () => {
                 <label className="font-medium">Email</label>
                 <input
                   type="email"
-                  name="email"
-                  onChange={handleChange}
-                  value={form.email}
+                  name="user_email"
                   className="w-full h-12 p-5 mb-2 font-light rounded-lg md:h-14 placeholder:text-sm placeholder:opacity-80 placeholder:italic focus:outline-v"
                   placeholder="Enter your email"
                   required
@@ -115,8 +95,6 @@ const EmailForm = () => {
                 <label className="font-medium">Message</label>
                 <textarea
                   name="message"
-                  onChange={handleChange}
-                  value={form.message}
                   className="w-full p-5 mb-3 font-light rounded-lg md:h-48 placeholder:text-sm placeholder:opacity-80 placeholder:italic focus:outline-v "
                   placeholder="What would you like to ask me?"
                   rows={3}
